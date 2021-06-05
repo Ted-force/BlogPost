@@ -55,7 +55,7 @@ app.get("/post/:postName", (req,res) => {
 })
 
 app.listen(port,function() {
-    console.log("server live at port:" + PORT);
+    console.log("server live at port:" + port);
 })
 
 
