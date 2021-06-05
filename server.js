@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("Public"));
 
-const PORT = 3000 || process.env.PORT;
+var port =  process.env.PORT || 3000;
 
 app.get("/",(req,res) => {
     res.render('index',{posts});
@@ -54,7 +54,7 @@ app.get("/post/:postName", (req,res) => {
     
 })
 
-app.listen(PORT,function() {
+app.listen(port,function() {
     console.log("server live at port:" + PORT);
 })
 
