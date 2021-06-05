@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("Public"));
 
-PORT = 3000 || process.env.PORT;
+const PORT = 3000 || process.env.PORT;
 
 app.get("/",(req,res) => {
     res.render('index',{posts});
